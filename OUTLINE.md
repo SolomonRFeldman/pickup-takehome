@@ -31,9 +31,9 @@ Notes:
 - [x] Create activerecord address model
 - [x] Create pickup table
 - [x] Create activerecord pickup model
-- [ ] Initialize react client
-- [ ] Create create endpoint in the pickups_controller and routes
-- [ ] Create on client a POST request form to '/pickups'
+- [x] Initialize react client
+- [x] Create create endpoint in the pickups_controller and routes
+- [x] Create on client a POST request form to '/pickups'
 - [ ] Create show endpoint in the pickups_controller and routes
 - [ ] Create on client a show page for a pickup at '/pickups/{pickup_id}' with the respective GET request
 - [ ] Make POST form redirect to '/pickups/{pickup_id}'
