@@ -27,7 +27,7 @@ Notes:
 
 ## Iterative Steps
 - [x] Initialize rails app with postgres DB and api flags
-- [ ] Create address table
+- [x] Create address table
 - [ ] Create activerecord address model
 - [ ] Create pickup table
 - [ ] Create activerecord pickup model
