@@ -1,20 +1,26 @@
 # Outline
 
 Server:
+
   2 endpoints: 
+  
     POST /pickups
     GET /pickups/{:pickup_id}
 
 Database:
+
   Tables:
+ 
     pickup: date: {date type}, location_id: {int type}, status: {enum type ["pending", "complete", "failed"]}
     address: street_address: {string type}, street_address_line_two: {string type, default: ""} city: {string type}, state: {string type}, zip: {string type}
   (Unless default, all fields require not NULL)
 
-Client:
-  Simple frontend with react, react routes, bootstrap and minimal styling.
-  root_path: form for creating a pickup -> POST requests server with pickup params -> redirects to '/pickups/{pickup_id}'
-  '/pickups/{pickup_id}' GET request to /pickups/{:pickup_id} on server
+Client: Simple frontend with react, react routes, bootstrap and minimal styling.
+
+  Paths:
+  
+    root_path: form for creating a pickup -> POST requests server with pickup params -> redirects to '/pickups/{pickup_id}'
+    '/pickups/{pickup_id}': GET request to /pickups/{:pickup_id} on server
 
 Notes: 
   Forgoing Users and signin for time contraints and to strictly adheer to the user story. It should be very easy to impliment on top of this app later.
