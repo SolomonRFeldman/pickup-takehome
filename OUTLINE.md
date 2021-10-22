@@ -26,7 +26,7 @@ Notes:
   Forgoing Users and signin for time contraints and to strictly adheer to the user story. It should be very easy to impliment on top of this app later.
 
 ## Iterative Steps
-- [ ] Initialize rails app with postgres DB and api flags
+- [x] Initialize rails app with postgres DB and api flags
 - [ ] Create address table
 - [ ] Create activerecord address model
 - [ ] Create pickup table
