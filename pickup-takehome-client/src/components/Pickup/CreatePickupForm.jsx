@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Form, Modal, Button } from 'react-bootstrap'
 import { postRequest } from '../../apiRequests'
 
-export default function CreatePickupForm({ show, handleClose }) {
+export default function CreatePickupForm({ show, handleClose, pickups, setPickups }) {
   const [formData, setFormData] = useState({ 
     address: { street_address: '', street_address_line2: '', city: '', state: '', zip: '' },
     date: '',
@@ -13,8 +13,11 @@ export default function CreatePickupForm({ show, handleClose }) {
 
   const handleSubmit = event => {
     event.preventDefault()
-    console.log(formData)
-    // return postRequest('/pickups', { pickup: formData })
+
+    return postRequest('/pickups', { pickup: formData }).then(resp => {
+      setPickups([...pickups, resp])
+      handleClose()
+    })
   }
 
   return(
