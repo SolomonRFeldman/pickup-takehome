@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_194858) do
+ActiveRecord::Schema.define(version: 2021_10_22_200945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_enum :status, [
+    "complete",
+    "failed",
+    "pending",
+  ], force: :cascade
 
   create_table "addresses", force: :cascade do |t|
     t.text "street_address", null: false
@@ -25,4 +31,14 @@ ActiveRecord::Schema.define(version: 2021_10_22_194858) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "pickups", force: :cascade do |t|
+    t.bigint "address_id", null: false
+    t.date "date", null: false
+    t.enum "status", null: false, enum_name: "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["address_id"], name: "index_pickups_on_address_id"
+  end
+
+  add_foreign_key "pickups", "addresses"
 end
