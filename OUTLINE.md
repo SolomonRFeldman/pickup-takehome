@@ -28,9 +28,9 @@ Notes:
 ## Iterative Steps
 - [x] Initialize rails app with postgres DB and api flags
 - [x] Create address table
-- [ ] Create activerecord address model
-- [ ] Create pickup table
-- [ ] Create activerecord pickup model
+- [x] Create activerecord address model
+- [x] Create pickup table
+- [x] Create activerecord pickup model
 - [ ] Initialize react client
 - [ ] Create create endpoint in the pickups_controller and routes
 - [ ] Create on client a POST request form to '/pickups'
