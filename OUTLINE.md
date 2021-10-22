@@ -11,8 +11,8 @@ Database:
 
   Tables:
  
-    pickup: date: {date type}, location_id: {int type}, status: {enum type ["pending", "complete", "failed"]}
-    address: street_address: {string type}, street_address_line_two: {string type, default: ""} city: {string type}, state: {string type}, zip: {string type}
+    pickup: date: {date type}, address_id: {int type}, status: {enum type ["pending", "complete", "failed"]}
+    address: street_address: {string type}, street_address_line2: {string type, default: ""} city: {string type}, state: {string type}, zip: {string type}
   (Unless default, all fields require not NULL)
 
 Client: Simple frontend with react, react routes, bootstrap and minimal styling.
