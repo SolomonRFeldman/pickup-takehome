@@ -7,6 +7,6 @@ class PickupsController < ApplicationController
   private
 
   def pickup_params
-    params.require(:pickup).permit(:date, :status, address: [:street_address, :street_address_line2, :city, :state, :zip])
+    params.require(:pickup).permit(:date, :status, address: %I[street_address street_address_line2 city state zip])
   end
 end
